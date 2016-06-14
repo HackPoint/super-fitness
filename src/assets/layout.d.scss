@@ -1,0 +1,12 @@
+@import "mixins/_layout-mixins";
+@import "vars/headers";
+@import "vars/header-colors-vars";
+
+body {
+  @include reset-mixin();
+}
+
+h1 {
+  font-size: $h1-size;
+  color: $h1-color;
+}

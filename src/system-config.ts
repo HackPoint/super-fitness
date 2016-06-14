@@ -3,20 +3,15 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map:any = {
-    '@angular2-material': 'vendor/@angular2-material'
+    'moment': 'vendor/moment/moment.js'
 };
 
 /** User packages configuration. */
 const packages:any = {
-    '@angular2-material/core': {
+    'moment': {
         format: 'cjs',
         defaultExtension: 'js',
-        main: 'core.js'
-    },
-    '@angular2-material/button': {
-        format: 'cjs',
-        defaultExtension: 'js',
-        main: 'button.js'
+        main: 'moment.js'
     }
 };
 
@@ -36,7 +31,6 @@ const barrels:string[] = [
 
     // Thirdparty barrels.
     'rxjs',
-
     // App specific barrels.
     'app',
     'app/shared',

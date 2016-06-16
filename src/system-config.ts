@@ -2,53 +2,76 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-const map: any = {
+const map:any = {
+    'moment': 'vendor/moment/moment.js',
+    '@angular2-material': 'vendor/@angular2-material',
+    'ng2-material': 'vendor/ng2-material',
 };
 
 /** User packages configuration. */
-const packages: any = {
+const packages:any = {
+    'moment': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'moment.js'
+    },
+    '@angular2-material/core': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'core.js'
+    },
+    '@angular2-material/checkbox': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'checkbox.js'
+    }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
  **********************************************************************************************/
-const barrels: string[] = [
-  // Angular specific barrels.
-  '@angular/core',
-  '@angular/common',
-  '@angular/compiler',
-  '@angular/http',
-  '@angular/router',
-  '@angular/platform-browser',
-  '@angular/platform-browser-dynamic',
+const barrels:string[] = [
+    // Angular specific barrels.
+    '@angular/core',
+    '@angular/common',
+    '@angular/compiler',
+    '@angular/http',
+    '@angular/router',
+    '@angular/platform-browser',
+    '@angular/platform-browser-dynamic',
 
-  // Thirdparty barrels.
-  'rxjs',
 
-  // App specific barrels.
-  'app',
-  'app/shared',
-  /** @cli-barrel */
+    // Thirdparty barrels.
+    'rxjs',
+    '@angular2-material',
+    'ng2-material',
+    // App specific barrels.
+    'app',
+    'app/shared',
+    'app/+home',
+    /** @cli-barrel */
 ];
 
-const cliSystemConfigPackages: any = {};
-barrels.forEach((barrelName: string) => {
-  cliSystemConfigPackages[barrelName] = { main: 'index' };
+const cliSystemConfigPackages:any = {};
+barrels.forEach((barrelName:string) => {
+    cliSystemConfigPackages[barrelName] = {main: 'index'};
 });
 
 /** Type declaration for ambient System. */
-declare var System: any;
+declare var System:any;
 
 // Apply the CLI SystemJS configuration.
 System.config({
-  map: {
-    '@angular': 'vendor/@angular',
-    'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
-  },
-  packages: cliSystemConfigPackages
+    map: {
+        '@angular': 'vendor/@angular',
+        'rxjs': 'vendor/rxjs',
+        '@angular2-material': 'vendor/@angular2-material',
+        'ng2-material': 'vendor/ng2-material',
+        'main': 'main.js'
+    },
+    packages: cliSystemConfigPackages
 });
 
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({map, packages});

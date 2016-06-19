@@ -166,16 +166,25 @@ module.exports = function (defaults) {
         sassCompiler: {
             cacheExclude: [/\/_[^\/]+$/]
         },
+        polyfills: [
+            'vendor/core-js/client/core.js',
+            'vendor/systemjs/dist/system.src.js',
+            'vendor/zone.js/dist/zone.js',
+            'vendor/hammerjs/hammer.min.js'
+        ],
+        tsCompiler: {},
         vendorNpmFiles: [
             'systemjs/dist/system-polyfills.js',
             'systemjs/dist/system.src.js',
             'zone.js/dist/**/*.+(js|js.map)',
+            'core-js/client/core.js',
             'es6-shim/es6-shim.js',
             'reflect-metadata/**/*.+(js|js.map)',
             'rxjs/**/*.+(js|js.map)',
             '@angular/**/*.+(js|js.map|css)',
             '@angular2-material/**/*.+(js|js.map|css)',
-            'ng2-material/**/*.+(js|js.map|css)'
+            'ng2-material/**/*.+(js|js.map|css)',
+            'hammerjs/*.min.+(js|js.map)'
         ]
     });
 

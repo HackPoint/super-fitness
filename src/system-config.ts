@@ -24,6 +24,11 @@ const packages:any = {
         format: 'cjs',
         defaultExtension: 'js',
         main: 'checkbox.js'
+    },
+    '@angular2-material/toolbar': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'toolbar.js'
     }
 };
 

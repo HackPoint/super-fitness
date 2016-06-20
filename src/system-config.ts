@@ -42,13 +42,14 @@ const barrels:string[] = [
     '@angular/common',
     '@angular/compiler',
     '@angular/http',
-    '@angular/router',
+    '@angular/router-deprecated',
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
 
 
     // Thirdparty barrels.
     'rxjs',
+    'symbol-observable',
     '@angular2-material',
     'ng2-material',
     // App specific barrels.
@@ -71,6 +72,7 @@ System.config({
     map: {
         '@angular': 'vendor/@angular',
         'rxjs': 'vendor/rxjs',
+        'symbol-observable': 'vendor/symbol-observable',
         '@angular2-material': 'vendor/@angular2-material',
         'ng2-material': 'vendor/ng2-material',
         'main': 'main.js'

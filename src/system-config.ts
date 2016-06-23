@@ -29,6 +29,11 @@ const packages:any = {
         format: 'cjs',
         defaultExtension: 'js',
         main: 'toolbar.js'
+    },
+    '@angular2-material/progress-circle': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'progress-circle.js'
     }
 };
 
@@ -55,8 +60,8 @@ const barrels:string[] = [
     // App specific barrels.
     'app',
     'app/shared',
-    'app/+home',
-    /** @cli-barrel */
+    'app/shared/components/spinner',
+  /** @cli-barrel */
 ];
 
 const cliSystemConfigPackages:any = {};

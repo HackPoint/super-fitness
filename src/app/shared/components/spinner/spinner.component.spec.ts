@@ -1,6 +1,7 @@
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
+/*
 import {
     beforeEach, beforeEachProviders,
     describe, xdescribe,
@@ -16,3 +17,4 @@ describe('Component: Components', () => {
         expect(component).toBeTruthy();
     });
 });
+*/

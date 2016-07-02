@@ -26,5 +26,5 @@ bootstrap(SuperFitnessAppComponent, [
     MdIconRegistry,
     Renderer,
     provide(HAMMER_GESTURE_CONFIG, {useClass: MdGestureConfig})
-]);
+]).catch(err => console.error(err));
 

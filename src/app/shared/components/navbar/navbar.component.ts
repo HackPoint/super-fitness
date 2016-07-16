@@ -4,7 +4,8 @@ declare var $:any;
 @Component({
   selector: 'navbar',
   template: `
-   <nav>
+    <div class="navbar-fixed">
+     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -22,6 +23,7 @@ declare var $:any;
         </ul>
       </div>
     </nav>
+    </div>
   `
 })
 export class NavbarComponent implements AfterViewInit {

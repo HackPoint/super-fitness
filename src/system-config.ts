@@ -4,8 +4,7 @@
 /** Map relative paths to URLs. */
 const map:any = {
     'moment': 'vendor/moment/moment.js',
-    '@angular2-material': 'vendor/@angular2-material',
-    'ng2-material': 'vendor/ng2-material',
+    '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
@@ -47,16 +46,14 @@ const barrels:string[] = [
     '@angular/common',
     '@angular/compiler',
     '@angular/http',
+    '@angular/forms',
     '@angular/router-deprecated',
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
-
-
     // Thirdparty barrels.
     'rxjs',
     'symbol-observable',
     '@angular2-material',
-    'ng2-material',
     // App specific barrels.
     'app',
     'app/shared',
@@ -79,7 +76,6 @@ System.config({
         'rxjs': 'vendor/rxjs',
         'symbol-observable': 'vendor/symbol-observable',
         '@angular2-material': 'vendor/@angular2-material',
-        'ng2-material': 'vendor/ng2-material',
         'main': 'main.js'
     },
     packages: cliSystemConfigPackages

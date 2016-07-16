@@ -5,7 +5,6 @@ import {provide} from '@angular/core';
 import {Renderer} from '@angular/core';
 import {ROUTER_PROVIDERS} from "@angular/router-deprecated";
 import {OVERLAY_CONTAINER_TOKEN} from '@angular2-material/core/overlay/overlay';
-import {MdLiveAnnouncer} from "@angular2-material/core/live-announcer/live-announcer";
 import {createOverlayContainer} from '@angular2-material/core/overlay/overlay-container';
 import {MdGestureConfig} from '@angular2-material/core/gestures/MdGestureConfig';
 import {MdIconRegistry} from '@angular2-material/icon/icon-registry';
@@ -20,7 +19,7 @@ if (environment.production) {
 
 bootstrap(SuperFitnessAppComponent, [
     ROUTER_PROVIDERS,
-    MdLiveAnnouncer,
+    // MdLiveAnnouncer,
     provide(OVERLAY_CONTAINER_TOKEN, {useValue: createOverlayContainer()}),
     HTTP_PROVIDERS,
     MdIconRegistry,

@@ -3,7 +3,7 @@ import {MdIcon} from "@angular2-material/icon/icon";
 import {MdToolbar} from '@angular2-material/toolbar';
 
 // custom
-import {SpinnerComponent} from './shared/components/spinner';
+import {SpinnerComponent} from './shared/components/index';
 
 @Component({
     moduleId: module.id,

@@ -1,0 +1,9 @@
+// import utils
+@import "../../utils/_units";
+
+.header {
+  .header-logo {
+    width: u(30rem);
+    height: u(30rem);
+  }
+}

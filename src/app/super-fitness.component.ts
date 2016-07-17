@@ -4,13 +4,13 @@ import {MATERIAL_DIRECTIVES} from "ng2-material";
 import {MdToolbar} from '@angular2-material/toolbar';
 
 // custom
-import {SpinnerComponent} from './shared/components/spinner';
+import {SideNavComponent, ParallaxContainerComponent} from './shared/components/index';
 
 @Component({
     moduleId: module.id,
     selector: 'super-fitness-app',
     templateUrl: 'super-fitness.component.html',
-    directives: [MATERIAL_DIRECTIVES, MdIcon, MdToolbar, SpinnerComponent]
+    directives: [SideNavComponent, ParallaxContainerComponent]
 })
 export class SuperFitnessAppComponent {
     title = 'Super Fitness';

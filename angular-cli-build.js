@@ -185,7 +185,7 @@ module.exports = function (defaults) {
             '@angular2-material/**/*.+(js|js.map|css)',
             'ng2-material/**/*.+(js|js.map|css)',
             'hammerjs/*.min.+(js|js.map)',
-            'symbol-observable/*.+(js|js.map)',
+            'symbol-observable/**/*.+(js|js.map)',
         ]
     });
 

@@ -20,10 +20,10 @@ if (environment.production) {
 
 bootstrap(SuperFitnessAppComponent, [
     ROUTER_PROVIDERS,
-    MdLiveAnnouncer,
-    provide(OVERLAY_CONTAINER_TOKEN, {useValue: createOverlayContainer()}),
+    // MdLiveAnnouncer,
+    // provide(OVERLAY_CONTAINER_TOKEN, {useValue: createOverlayContainer()}),
     HTTP_PROVIDERS,
-    MdIconRegistry,
+    // MdIconRegistry,
     Renderer,
     provide(HAMMER_GESTURE_CONFIG, {useClass: MdGestureConfig})
 ]).catch(err => console.error(err));

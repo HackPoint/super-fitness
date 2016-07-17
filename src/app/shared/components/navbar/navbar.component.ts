@@ -1,5 +1,5 @@
-import {Component, AfterViewInit} from '@angular/core';
-declare var $:any;
+import {Component} from '@angular/core';
+import {JQueryBase} from "../../common/jquery.base";
 
 @Component({
   selector: 'navbar',
@@ -26,9 +26,9 @@ declare var $:any;
     </div>
   `
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent extends JQueryBase {
   ngAfterViewInit():any {
-    $('.button-collapse').sideNav({
+    this.jQuery('.button-collapse').sideNav({
       menuWidth: 300,
       edge: 'right',
       closeOnClick: true

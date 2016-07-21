@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {JQueryBase} from "../../common/jquery.base";
+import {HeadroomDirective} from "../../directives/index";
 
 @Component({
   selector: 'navbar',
   template: `
-    <div class="navbar-fixed">
-     <nav>
+    <div class="navbar-fixed " >
+     <nav >
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -22,9 +23,10 @@ import {JQueryBase} from "../../common/jquery.base";
           <li><a href="mobile.html">Mobile</a></li>
         </ul>
       </div>
-    </nav>
+     </nav>
     </div>
-  `
+  `,
+  directives: [HeadroomDirective]
 })
 export class NavbarComponent extends JQueryBase {
   ngAfterViewInit():any {
@@ -33,6 +35,8 @@ export class NavbarComponent extends JQueryBase {
       edge: 'right',
       closeOnClick: true
     });
+
+    this.jQuery('.parallax').parallax();
     return null;
   }
 

@@ -1,25 +1,35 @@
-import {Directive, OnInit, OnDestroy, ElementRef} from '@angular/core';
+/// <reference path="headroom.d.ts" />
+
+import {Directive, OnDestroy, ElementRef} from '@angular/core';
 import {JQueryBase} from "../../common/jquery.base";
 
 @Directive({
   selector: '[headroom]'
 })
-export class HeadroomDirective extends JQueryBase {
+export class HeadroomDirective extends JQueryBase implements OnDestroy {
+
+  private headroom:Headroom;
+
   constructor(private el:ElementRef) {
     super();
   }
 
   ngAfterViewInit() {
-   /* var headroom = new Headroom(this.el.nativeElement, {
-      "offset": 305,
-      "tolerance": 9,
-      "classes": {
-        "initial": "animated",
-        "pinned": "slideDown",
-        "unpinned": "slideUp"
+    this.headroom = new Headroom(this.el.nativeElement, {
+      tolerance: 0,
+      offset: 205,
+      classes: {
+        initial: "headroom",
+        pinned: "slideDown",
+        unpinned: "slideUp"
       }
     });
-    headroom.init();*/
-    return null;
+    this.headroom.init();
+    return true;
+  }
+
+  ngOnDestroy():any {
+    this.headroom.destroy();
+    return true;
   }
 }
